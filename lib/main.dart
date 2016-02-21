@@ -19,11 +19,11 @@ class Cat extends StatelessComponent {
         child: new Container(
             width: 100.0,
             height: 100.0,
-            child: new AssetImage(name: 'packages/lolwat/res/Nathan.png')));
-          //  child: new NetworkImage(
+
+            child: new NetworkImage(
                 //fit:ImageFit.cover,
                 //alignment:const FractionalOffset(0.0,0.5),
-          //      src: 'https://i.ytimg.com/vi/UIrEM_9qvZU/maxresdefault.jpg')));
+                src: 'https://i.ytimg.com/vi/UIrEM_9qvZU/maxresdefault.jpg')));
   }
 }
 
@@ -45,7 +45,6 @@ class CatsState extends State<Cats> {
 
 void initState(){
   super.initState();
-  ui.window.onMetricsChanged=()=>setState((){print("size ${ui.window.size}");});
 }
 
   Widget build(_) {
