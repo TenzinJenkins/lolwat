@@ -45,7 +45,12 @@ class CatsState extends State<Cats> {
 
 void initState(){
   super.initState();
+  try{
+    activity.setSystemUiVisibility(SystemUiVisibility.immersive);}
+    catch (exception) {}
 }
+
+
 
   Widget build(_) {
     if (ui.window.size == Size.zero) {
@@ -65,7 +70,7 @@ void initState(){
             top: c.offset.dy,
             child: new GestureDetector(onTap: () {
               setState(() {
-                new Timer(const Duration(seconds: 2), () {
+                new Timer(const Duration(seconds: 4), () {
                   setState(() {
                     addCat();
                   });
